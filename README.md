@@ -1,16 +1,12 @@
 # flutter_pract1
 
-A new Flutter project.
+# Практическая работа №1
+## Тема: Создание красивого repository для GitHub (Это просто пример)
 
-## Getting Started
+#### Цель работы:
 
-This project is a starting point for a Flutter application.
+#### Ход работы:
 
-A few resources to get you started if this is your first Flutter project:
+![Как вставить картинку!](https://github.com/PDA2304/Flutter/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-09-11%20200347.png "San Juan Mountains")
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Вывод:
