@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pract1/screen1.dart';
 import 'package:flutter_pract1/screen2.dart';
+import 'package:flutter_pract1/screen3.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,10 +20,22 @@ class MenuScreen extends StatelessWidget {
           mainAxisSpacing: 10.0,
           shrinkWrap: true,
           children: [
-            MenuButton(text: '1',press: (() => Get.to(() => Screen1())),),
-            MenuButton(text: '2',press: (() => Get.to(() => Screen2())),),
-            MenuButton(text: '3',press: (() => Get.to(() => Screen1())),),
-            MenuButton(text: '4',press: (() => Get.to(() => Screen1())),),
+            MenuButton(
+              text: '1',
+              press: (() => Get.to(() => Screen1())),
+            ),
+            MenuButton(
+              text: '2',
+              press: (() => Get.to(() => Screen2())),
+            ),
+            MenuButton(
+              text: '3',
+              press: (() => Get.to(() => Screen3())),
+            ),
+            MenuButton(
+              text: '4',
+              press: (() => Get.to(() => Screen1())),
+            ),
           ]),
     );
   }
