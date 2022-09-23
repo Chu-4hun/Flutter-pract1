@@ -59,6 +59,7 @@ class Sc3_card extends StatelessWidget {
                         fontWeight: FontWeight.w400, color: Colors.grey),
                   ),
                 ),
+                Expanded(flex: 1, child: Container()),
                 Expanded(
                   child: AutoSizeText(
                     overflow: TextOverflow.ellipsis,

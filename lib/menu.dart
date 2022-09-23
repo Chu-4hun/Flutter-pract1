@@ -32,10 +32,7 @@ class MenuScreen extends StatelessWidget {
               text: '3',
               press: (() => Get.to(() => Screen3())),
             ),
-            MenuButton(
-              text: '4',
-              press: (() => Get.to(() => Screen1())),
-            ),
+            
           ]),
     );
   }
