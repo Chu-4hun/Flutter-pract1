@@ -10,7 +10,11 @@ class Screen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: () => Get.back(), child:  Icon(Icons.arrow_back),hoverColor: Colors.blueAccent,),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Get.back(),
+        child: Icon(Icons.arrow_back),
+        hoverColor: Colors.blueAccent,
+      ),
       backgroundColor: const Color.fromARGB(255, 3, 158, 162),
       body: SafeArea(
         child: Column(
@@ -55,7 +59,8 @@ class Screen1 extends StatelessWidget {
             Container(
               height: Get.height / 15,
             ),
-            Image.network('https://random.imagecdn.app/300/200')
+            Expanded(child: Image.asset('assets/img/dude.png')),
+            // Image.network('https://random.imagecdn.app/300/200')
           ],
         ),
       ),
