@@ -9,13 +9,13 @@
 ```
 lib
 ├── main.dart
-├── menu_view.dart
 ├── utilis
 │   ├── reusable_card.dart
 │   ├── rounded_button.dart
 │   ├── screen3_card.dart
 │   └── song_card.dart
 └── views
+    ├── menu_view.dart
     ├── screen1_view.dart
     ├── screen2_view.dart
     └── screen3_view.dart

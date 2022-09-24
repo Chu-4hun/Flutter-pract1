@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-import 'menu_view.dart';
+import 'views/menu_view.dart';
 
 void main() {
   runApp(const MyApp());
