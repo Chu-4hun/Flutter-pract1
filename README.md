@@ -19,7 +19,7 @@ lib
     ├── screen1_view.dart
     ├── screen2_view.dart
     └── screen3_view.dart
-    ```
+```
 
 Сначала было создано окно с выбором версток ```lib\menu_view.dart``` с помощью ```dart GridView.count() ``` и добавил кнопки с помощью, обернутой в ```MenuButton()```, ```ReusableCard()```
 и с помощью этого окна можно переходить между всем версками
