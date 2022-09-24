@@ -22,7 +22,7 @@ class Sc3_card extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(20.0),
-              child: Image.network('https://random.imagecdn.app/400/250'),
+              child: Image.network('https://random.imagecdn.app/500/300'),
             ),
             const SizedBox(
               height: 10,
@@ -59,17 +59,19 @@ class Sc3_card extends StatelessWidget {
                         fontWeight: FontWeight.w400, color: Colors.grey),
                   ),
                 ),
-                Expanded(flex: 1, child: Container()),
-                Expanded(
-                  child: AutoSizeText(
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                    'Start',
-                    style: GoogleFonts.lato(
-                        fontWeight: FontWeight.w400, color: Colors.grey),
-                  ),
+                Expanded(flex: 2, child: Container()),
+                Row(
+                  children: [
+                    AutoSizeText(
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                      'Start',
+                      style: GoogleFonts.lato(
+                          fontWeight: FontWeight.w400, color: Colors.grey),
+                    ),
+                    IconButton(onPressed: () {}, icon: Icon(Icons.arrow_right))
+                  ],
                 ),
-                IconButton(onPressed: () {}, icon: Icon(Icons.arrow_right))
               ],
             )
           ],

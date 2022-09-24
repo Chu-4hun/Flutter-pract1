@@ -11,7 +11,6 @@ class ReusableCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPress,
-      
         child: Ink(
           child: child,
           padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 2.0),
