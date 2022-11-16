@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:second_practical/core/db/data_base_helper.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    DataBaseHelper.instance.init();
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Text('sss'),
     );
   }
 }
