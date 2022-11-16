@@ -43,6 +43,6 @@ lib/
 │       └── warehouse_entity.dart
 └── main.dart
 ```
-[File](../../../../D:/CODE/Flutter/flutter_pract1/lib/core/db/data_base_helper.dart)
+[File](https://github.com/Chu-4hun/flutter_pract1/blob/3a5797ffc0eee9741e189c43179040d9395049d9/lib/core/db/data_base_helper.dart)
 
 #### Вывод: По мере прохождения данной практической работы были приобретены и закреплены навыки создания и работы базами данных.
