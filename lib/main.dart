@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:second_practical/core/db/data_base_helper.dart';
+import 'package:pr2/core/db/data_base_helper.dart';
+import 'package:pr2/views/auth_view.dart';
 
 void main() {
   runApp(const App());
@@ -10,9 +11,6 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    DataBaseHelper.instance.init();
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-    );
+    return AuthView();
   }
 }

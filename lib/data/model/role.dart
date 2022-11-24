@@ -1,4 +1,4 @@
-import 'package:second_practical/domain/entity/role_entity.dart';
+import 'package:pr2/domain/entity/role_entity.dart';
 
 class Role extends RoleEntity {
   Role({required super.role});

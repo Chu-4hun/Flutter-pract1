@@ -1,10 +1,9 @@
 import 'dart:io';
 
 import 'package:path/path.dart';
-import 'package:second_practical/common/data_base_request.dart';
-import 'package:second_practical/data/model/role.dart';
+import 'package:pr2/common/data_base_request.dart';
+import 'package:pr2/data/model/role.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 
 class DataBaseHelper {
@@ -21,17 +20,18 @@ class DataBaseHelper {
     _appDocumentDirectory =
         await path_provider.getApplicationDocumentsDirectory();
 
-    _pathDB = join(_appDocumentDirectory.path, 'booksstore2353.db');
+    _pathDB = join(_appDocumentDirectory.path, 'booksstore.db');
 
     if (Platform.isWindows || Platform.isMacOS || Platform.isLinux) {
-      databaseFactory = databaseFactoryFfi;
+      /// todo
+    } else {
+      dataBase = await openDatabase(
+        _pathDB,
+        version: _version,
+        onUpgrade: (db, oldVersion, newVersion) => onUpdateTable(db),
+        onCreate: (db, version) {},
+      );
     }
-    dataBase = await openDatabase(
-      _pathDB,
-      version: _version,
-      onUpgrade: (db, oldVersion, newVersion) => onUpdateTable(db),
-      onCreate: (db, version) => onCreateTable(db),
-    );
   }
 
   Future<void> onUpdateTable(Database db) async {

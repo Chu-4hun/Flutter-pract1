@@ -1,21 +1,26 @@
-import 'package:second_practical/domain/entity/user_entity.dart';
+import 'dart:developer';
+
+import 'package:pr2/domain/entity/role_entity.dart';
+import 'package:pr2/domain/entity/user_entity.dart';
 
 class User extends UserEntity {
-  User({required super.login, required super.password, required super.role});
+  User({
+    required super.login,
+    required super.password,
+    required super.idRole,
+  });
 
   Map<String, dynamic> toMap() {
-    return {
-      'naloginme': login,
-      'password': password,
-      'role': role,
-    };
+    return {'login': login, 'password': password};
   }
 
   factory User.toFromMap(Map<String, dynamic> json) {
     return User(
       login: json['login'],
       password: json['password'],
-      role: json['role'],
+      idRole: RoleEnum.values.firstWhere(
+        (element) => element.id == (json['id_role'] as int),
+      ),
     );
   }
 }
