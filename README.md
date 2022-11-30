@@ -8,20 +8,23 @@
 Структура приложения
 ```
 lib
-├── main.dart
-├── utilis
-│   ├── reusable_card.dart
-│   ├── rounded_button.dart
-│   ├── screen3_card.dart
-│   └── song_card.dart
-└── views
-    ├── menu_view.dart
-    ├── screen1_view.dart
-    ├── screen2_view.dart
-    └── screen3_view.dart
+│   main.dart
+│
+├───controllers
+│       counter_controller.dart
+│
+├───utilis
+│       reusable_card.dart
+│       rounded_button.dart
+│       screen3_card.dart
+│       song_card.dart
+│
+└───views
+        counter_view.dart
 ```
+--- надо обновить ниже ---
 
-Сначала было создано окно с выбором версток ```lib\menu_view.dart``` с помощью ```dart GridView.count() ``` и добавил кнопки с помощью, обернутой в ```MenuButton()```, ```ReusableCard()```
+Сначала было создано окно с выбором версток ```lib\``` с помощью ```dart GridView.count() ``` и добавил кнопки с помощью, обернутой в ```MenuButton()```, ```ReusableCard()```
 и с помощью этого окна можно переходить между всем версками
 
 1.	Первая верстка ```lib\views\screen1_view.dart```
