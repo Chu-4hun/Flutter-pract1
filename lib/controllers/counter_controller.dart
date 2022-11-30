@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Controller extends GetxController {
@@ -6,11 +5,11 @@ class Controller extends GetxController {
   RxList<String> history = List<String>.empty().obs;
   increment() {
     count++;
-    history.add('Incremented 1 ' + TimeOfDay.now().toString());
+    history.add('Incremented 1  At time - ' + DateTime.now().toString());
   }
 
   decrement() {
     count--;
-    history.add('Dectrmented 1 ' + TimeOfDay.now().toString());
+    history.add('Dectrmented 1  At time - ' + DateTime.now().toString());
   }
 }
