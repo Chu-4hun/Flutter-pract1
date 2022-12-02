@@ -1,9 +1,9 @@
 # flutter_pract1
 
-# Практическая работа №1
-## Тема: Составление шаблонов Flutter
+# Практическая работа №4
+## Тема: Реактировное программирование Flutter
 
-#### Цель работы: отработать верстку в Flutter
+#### Цель работы: отработать реактивное программирование в Flutter
 #### Ход работы:
 Структура приложения
 ```
@@ -22,40 +22,21 @@ lib
 └───views
         counter_view.dart
 ```
---- надо обновить ниже ---
+Сначала было создано окно с заданием ```lib\views\counter_view.dart``` 
 
-Сначала было создано окно с выбором версток ```lib\``` с помощью ```dart GridView.count() ``` и добавил кнопки с помощью, обернутой в ```MenuButton()```, ```ReusableCard()```
-и с помощью этого окна можно переходить между всем версками
-
-1.	Первая верстка ```lib\views\screen1_view.dart```
-
-Использовал ```FloatingActionButton()``` чтобы у пользователя была кнопка перехода в меню. Создал пользовательский класс ```lib\utilis\rounded_button.dart```  ```RoundedButtonWPadding()``` который оборачивает ```OutlinedButton()``` в виджетах для удобства использования 
-
+Использовал ```Obx(() => )``` для реактивного изменения ```ListView()```, ```Text```
 ![](https://github.com/Chu-4hun/flutter_pract1/blob/e31d616884780988cebffb9f90e60337079fcee1/images/v1.png "Первая верстка")
 
-1.1. Структура первого окна
+
+Для смены темы использовал ```Get.changeTheme(Get.isDarkMode ? ThemeData.light() : ThemeData.dark());```
 
 ![](https://github.com/Chu-4hun/flutter_pract1/blob/e31d616884780988cebffb9f90e60337079fcee1/images/v1_1.png "Структура первого окна")
 
-2.	Вторая верстка ```lib\views\screen2_view.dart```
+Для редактирования данными создал ```lib/controllers/counter_controller.dart``` для реактивности контроллра наследовал класс от ```GetxController```
 
-Использовал ```FloatingActionButton()``` чтобы у пользователя была кнопка перехода в меню. Для того, чтобы сделать изображение с закругленными краями применил виджет ```ClipRRect()```. Все изображения берутся из интернета c помощью ```Image.network('https://random.imagecdn.app/400/250'))```
-
+Для создания реактивного значения использовал ```.obs```
 
 ![](https://github.com/Chu-4hun/flutter_pract1/blob/e31d616884780988cebffb9f90e60337079fcee1/images/v2.png "Вторая верстка")
 
-2.1. Структура второго окна
 
-![](https://github.com/Chu-4hun/flutter_pract1/blob/e31d616884780988cebffb9f90e60337079fcee1/images/v2_2.png "Структура второго окна")
-
-3.	Третья верстка ```lib\views\screen3_view.dart```
-
-Использовал ```FloatingActionButton()``` чтобы у пользователя была кнопка перехода в меню. Создал пользовательский класс ```lib\utilis\screen3_card.dart```
-
-![](https://github.com/Chu-4hun/flutter_pract1/blob/e31d616884780988cebffb9f90e60337079fcee1/images/v3.png "Третья верстка")
-
-3.1. Структура третьего окна
-
-![](https://github.com/Chu-4hun/flutter_pract1/blob/e31d616884780988cebffb9f90e60337079fcee1/images/v3_3.png "Структура третьего окна")
-
-#### Вывод: По мере прохождения данной практической работы были приобретены и закреплены навыки верстки во флаттере.
+#### Вывод: По мере прохождения данной практической работы были приобретены и закреплены навыки реактивного программирования в Flutter.
