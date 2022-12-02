@@ -13,9 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      theme: Theme.of(context).copyWith(scaffoldBackgroundColor: Colors.white),
-      darkTheme: Theme.of(context).copyWith(
-          splashColor: Colors.yellow, scaffoldBackgroundColor: Colors.grey),
+      theme: Theme.of(context)
+          .copyWith(scaffoldBackgroundColor: Colors.white),
+      darkTheme: Theme.of(context)
+          .copyWith(scaffoldBackgroundColor: Colors.grey),
       debugShowCheckedModeBanner: false,
       home: CounterView(),
     );

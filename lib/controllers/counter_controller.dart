@@ -4,12 +4,12 @@ class Controller extends GetxController {
   RxInt count = 0.obs;
   RxList<String> history = List<String>.empty().obs;
   increment() {
-    count++;
-    history.add('Incremented 1  At time - ' + DateTime.now().toString());
+    Get.isDarkMode ? count + 2 : count++;
+    history.add('Incremented  At time - ' + DateTime.now().toString());
   }
 
   decrement() {
-    count--;
-    history.add('Dectrmented 1  At time - ' + DateTime.now().toString());
+    Get.isDarkMode ? count - 2 : count--;
+    history.add('Dectrmented  At time - ' + DateTime.now().toString());
   }
 }

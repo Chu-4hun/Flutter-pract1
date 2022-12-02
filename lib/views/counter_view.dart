@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 
 import '../controllers/counter_controller.dart';
 import '../utilis/reusable_card.dart';
-import '../utilis/rounded_button.dart';
 
 class CounterView extends StatelessWidget {
   const CounterView({super.key});
@@ -17,25 +16,28 @@ class CounterView extends StatelessWidget {
           children: [
             Obx(() => Text(
                   c.count.toString(),
-                  style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontSize: 40, fontWeight: FontWeight.bold),
                 )),
             Center(
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ReusableCard(
-                    onPress: (() => c.increment()),
-                    color: Colors.blue,
-                    child: Icon(
+                  FloatingActionButton(
+                    onPressed: (() => c.increment()),
+                    child: const Icon(
                       Icons.add,
                     ),
                   ),
-                  SizedBox(width: 50,),
-                  ReusableCard(
-                    onPress: (() => c.decrement()),
-                    color: Colors.blue,
-                    child: Icon(Icons.remove),
+                  const SizedBox(
+                    width: 50,
+                  ),
+                  FloatingActionButton(
+                    onPressed: (() => c.decrement()),
+                    child: const Icon(
+                      Icons.remove,
+                    ),
                   ),
                 ],
               ),
@@ -56,16 +58,15 @@ class CounterView extends StatelessWidget {
                 ),
               ),
             ),
-            ReusableCard(
-              onPress: (() {
+            FloatingActionButton(
+              onPressed: (() {
                 c.history.add(
                     'Theme changed to ${Get.isDarkMode ? 'Light' : 'Dark'}');
                 Get.changeTheme(
                     Get.isDarkMode ? ThemeData.light() : ThemeData.dark());
               }),
-              color: Colors.blue,
-              child: Icon(Icons.sunny),
-            )
+              child: const Icon(Icons.sunny),
+            ),
           ],
         ),
       ),
